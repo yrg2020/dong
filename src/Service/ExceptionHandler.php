@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Service;
+namespace CXD2020\Service;
 
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
@@ -20,7 +20,7 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use DONG2020\Contracts\RestfulException;
+use CXD2020\Contracts\RestfulException;
 
 
 /**

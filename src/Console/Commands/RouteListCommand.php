@@ -8,7 +8,7 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Console\Commands;
+namespace CXD2020\Console\Commands;
 
 use Appzcoder\LumenRoutesList\RoutesCommand;
 
@@ -33,7 +33,7 @@ class RouteListCommand extends RoutesCommand
     protected $description = '显示路由表';
 
     /**
-     * @return \DONG2020\Application
+     * @return \CXD2020\Application
      */
     protected function getRealApplication()
     {

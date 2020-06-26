@@ -8,11 +8,11 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Controller;
+namespace CXD2020\Controller;
 
 use Illuminate\Support\Str;
-use DONG2020\Contracts\RestfulErrorMessage;
-use DONG2020\Contracts\RestfulException;
+use CXD2020\Contracts\RestfulErrorMessage;
+use CXD2020\Contracts\RestfulException;
 
 
 /**
@@ -21,7 +21,7 @@ use DONG2020\Contracts\RestfulException;
 class ApiDocController extends MethController
 {
     /**
-     * @var \DONG2020\Router
+     * @var \CXD2020\Router
      */
     protected $router;
 
@@ -37,7 +37,7 @@ class ApiDocController extends MethController
 
     /**
      * @return \Illuminate\Http\Response|\Laravel\Lumen\Http\ResponseFactory
-     * @throws \DONG2020\Contracts\RestfulException
+     * @throws \CXD2020\Contracts\RestfulException
      */
     public function get()
     {
@@ -48,10 +48,10 @@ class ApiDocController extends MethController
         $presentFile = $this->request->query->get('file', 'index.html');
 
         if ($presentFile == 'json') {
-            if (!file_exists(\config('DONG2020.apiJsonFile'))) {
+            if (!file_exists(\config('CXD2020.apiJsonFile'))) {
                 throw new RestfulException(RestfulErrorMessage::NotFound, 'api json file not exists');
             }
-            $presentFile = \config('DONG2020.apiJsonFile');
+            $presentFile = \config('CXD2020.apiJsonFile');
         } else {
             $presentFile = sprintf('%s/view/swagger-ui/%s', dirname(__DIR__), $presentFile);
         }

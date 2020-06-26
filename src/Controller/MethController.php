@@ -8,15 +8,15 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Controller;
+namespace CXD2020\Controller;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Laravel\Lumen\Routing\Controller;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
-use DONG2020\Contracts\RestfulErrorMessage;
-use DONG2020\Contracts\RestfulException;
+use CXD2020\Contracts\RestfulErrorMessage;
+use CXD2020\Contracts\RestfulException;
 
 
 /**
@@ -83,7 +83,7 @@ abstract class MethController extends Controller
      * @param int  $minCount
      *
      * @return bool
-     * @throws \DONG2020\Contracts\RestfulException
+     * @throws \CXD2020\Contracts\RestfulException
      */
     protected function payloadIsAttributeSet($validateJson = true, $minCount = 1)
     {

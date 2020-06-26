@@ -8,12 +8,12 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Console\Commands;
+namespace CXD2020\Console\Commands;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use DONG2020\Controller\RestfulController;
+use CXD2020\Controller\RestfulController;
 
 
 /**
@@ -88,7 +88,7 @@ class OpenAPICommand extends RouteListCommand
             }
             $apiControllers[$route['uri']]['methods'][] = $route['method'];
         }
-        [$paths, $definitions, $tags] = $this->genDoc($apiControllers, \config('DONG2020.apiTagGroup'));
+        [$paths, $definitions, $tags] = $this->genDoc($apiControllers, \config('CXD2020.apiTagGroup'));
 
         if (count($this->errors) > 0) {
             foreach (array_unique(array_values($this->errors)) as $error) {
@@ -113,11 +113,11 @@ class OpenAPICommand extends RouteListCommand
             $definitions[$key] = $def[$key];
         }
         $api = json_decode(file_get_contents(dirname(__FILE__) . '/Stubs/openapi.json'), true);
-        $api = array_merge($api, \config('DONG2020.apiDoc'));
+        $api = array_merge($api, \config('CXD2020.apiDoc'));
         $api['tags'] = $tags;
         $api['paths'] = $paths;
         $api['definitions'] = $definitions;
-        file_put_contents(\config('DONG2020.apiJsonFile'), json_encode($api));
+        file_put_contents(\config('CXD2020.apiJsonFile'), json_encode($api));
     }
 
     /**

@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Contracts;
+namespace CXD2020\Contracts;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Fluent;
@@ -45,7 +45,7 @@ class RestfulRequest extends Fluent
             $resourceId = $routeParams[$key];
             unset($routeParams[$key]);
         }
-        $pageSize = config('DONG2020.pageSize', 20);
+        $pageSize = config('CXD2020.pageSize', 20);
         parent::__construct([
             'resourceId' => $resourceId,
             'params'     => new ParameterBag(
@@ -108,7 +108,7 @@ class RestfulRequest extends Fluent
      */
     protected function getKey()
     {
-        return config('DONG2020.idKey', 'id');
+        return config('CXD2020.idKey', 'id');
     }
 
 

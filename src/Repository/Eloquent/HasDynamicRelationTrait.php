@@ -8,7 +8,7 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Repository\Eloquent;
+namespace CXD2020\Repository\Eloquent;
 
 /**
  * has dynamic relation

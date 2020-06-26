@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Repository\Eloquent;
+namespace CXD2020\Repository\Eloquent;
 
 use Illuminate\Container\Container;
 
@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\{
 };
 
 use Symfony\Component\HttpFoundation\ParameterBag;
-use DONG2020\Contracts\{
+use CXD2020\Contracts\{
     DocumentLinkMeta,
     IResourceRepository,
     ICollectionFindOptionParser,
@@ -107,7 +107,7 @@ class ModelRepository implements IResourceRepository
         $this->modelClass = $modelClass;
         $this->href = $href;
         $this->parser = $parser ?: new CollectionFindOptionParser();
-        $this->idKey = $idKey ? $idKey : \config('DONG2020.idKey', 'id');
+        $this->idKey = $idKey ? $idKey : \config('CXD2020.idKey', 'id');
         $this->isChild = $childRepo;
     }
 
@@ -219,7 +219,7 @@ class ModelRepository implements IResourceRepository
     /**
      * get resource links
      *
-     * @param \DONG2020\Repository\Eloquent\ModelRelationTrait $model
+     * @param \CXD2020\Repository\Eloquent\ModelRelationTrait $model
      * @param string                                        $resourceId
      * @return array
      */
@@ -390,7 +390,7 @@ class ModelRepository implements IResourceRepository
     }
 
     /**
-     * @param Model|\DONG2020\Repository\Eloquent\HasTempAttributeTrait $model
+     * @param Model|\CXD2020\Repository\Eloquent\HasTempAttributeTrait $model
      * @param string                                                 $key
      * @param mixed                                                  $value
      *
@@ -416,7 +416,7 @@ class ModelRepository implements IResourceRepository
     }
 
     /**
-     * @return \DONG2020\Contracts\Collection
+     * @return \CXD2020\Contracts\Collection
      */
     private function _createEmptyCollection()
     {
@@ -432,7 +432,7 @@ class ModelRepository implements IResourceRepository
 
     /**
      * @param array $attributes
-     * @return \DONG2020\Contracts\Collection
+     * @return \CXD2020\Contracts\Collection
      */
     protected function updateByAttrs(array $attributes)
     {
@@ -465,7 +465,7 @@ class ModelRepository implements IResourceRepository
     }
 
     /**
-     * @param Model|\DONG2020\Repository\Eloquent\ModelRelationTrait $model
+     * @param Model|\CXD2020\Repository\Eloquent\ModelRelationTrait $model
      * @param array                                               $attributes
      * @return \Illuminate\Database\Eloquent\Model
      * @throws \Exception
@@ -486,7 +486,7 @@ class ModelRepository implements IResourceRepository
      * @param array $attributes
      * @param array $withRels
      *
-     * @return \DONG2020\Contracts\Document
+     * @return \CXD2020\Contracts\Document
      */
     public function create(array $attributes, array $withRels = [])
     {
@@ -514,7 +514,7 @@ class ModelRepository implements IResourceRepository
     /**
      * replace document
      *
-     * @param \DONG2020\Contracts\Document $document
+     * @param \CXD2020\Contracts\Document $document
      * @param mixed                     $key
      * @param array                     $attributes
      * @param array                     $withRels
@@ -547,7 +547,7 @@ class ModelRepository implements IResourceRepository
     /**
      * batch replace document
      *
-     * @param \DONG2020\Contracts\CollectionFindOption $findOption
+     * @param \CXD2020\Contracts\CollectionFindOption $findOption
      * @param array                                 $attributes
      * @param array                                 $withRels
      *
@@ -858,7 +858,7 @@ class ModelRepository implements IResourceRepository
     }
 
     /**
-     * @param \DONG2020\Contracts\CollectionFindOption $findOption
+     * @param \CXD2020\Contracts\CollectionFindOption $findOption
      *
      * @return void
      */

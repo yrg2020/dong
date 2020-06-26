@@ -8,13 +8,13 @@
  *
  */
 
-namespace DONG2020\Repository\Eloquent;
+namespace CXD2020\Repository\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
-use DONG2020\Contracts\CollectionFindOption;
-use DONG2020\Contracts\ICollectionFindOptionParser;
+use CXD2020\Contracts\CollectionFindOption;
+use CXD2020\Contracts\ICollectionFindOptionParser;
 
 /**
  * parse collection find option to query

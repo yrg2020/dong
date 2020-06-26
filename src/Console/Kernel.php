@@ -1,6 +1,6 @@
 <?php
 /**
- * DONG2020 console kernel
+ * CXD2020 console kernel
  *
  * PHP Version 7.2
  *
@@ -8,13 +8,13 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Console;
+namespace CXD2020\Console;
 
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
 
 /**
- * DONG2020 console kernel
+ * CXD2020 console kernel
  */
 class Kernel extends ConsoleKernel
 {
@@ -26,8 +26,8 @@ class Kernel extends ConsoleKernel
     {
         if ($app->environment() == 'local' || $app->environment() == 'testing') {
             $this->commands[] = \Mlntn\Console\Commands\Serve::class;     // php artisan serve
-            $this->commands[] = \DONG2020\Console\Commands\RouteListCommand::class; // php artisan route:list
-            $this->commands[] = \DONG2020\Console\Commands\OpenAPICommand::class; // php artisan doc
+            $this->commands[] = \CXD2020\Console\Commands\RouteListCommand::class; // php artisan route:list
+            $this->commands[] = \CXD2020\Console\Commands\OpenAPICommand::class; // php artisan doc
         }
         parent::__construct($app);
     }

@@ -8,11 +8,11 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Controller;
+namespace CXD2020\Controller;
 
 use Illuminate\Http\Request;
-use DONG2020\Contracts\RestfulErrorMessage;
-use DONG2020\Contracts\RestfulException;
+use CXD2020\Contracts\RestfulErrorMessage;
+use CXD2020\Contracts\RestfulException;
 
 
 /**
@@ -21,7 +21,7 @@ use DONG2020\Contracts\RestfulException;
 class RouteMapController extends ActionController
 {
     /**
-     * @var \DONG2020\Router
+     * @var \CXD2020\Router
      */
     protected $router;
 
@@ -46,8 +46,8 @@ class RouteMapController extends ActionController
     }
 
     /**
-     * @return \DONG2020\Contracts\Action
-     * @throws \DONG2020\Contracts\RestfulException
+     * @return \CXD2020\Contracts\Action
+     * @throws \CXD2020\Contracts\RestfulException
      */
     public function get()
     {

@@ -9,7 +9,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Contracts;
+namespace CXD2020\Contracts;
 
 
 use Symfony\Component\HttpFoundation\ParameterBag;
@@ -77,7 +77,7 @@ interface IResourceRepository
     /**
      * replace document
      *
-     * @param \DONG2020\Contracts\Document $document
+     * @param \CXD2020\Contracts\Document $document
      * @param mixed                     $key
      * @param array                     $attributes
      * @param array                     $withRels
@@ -89,7 +89,7 @@ interface IResourceRepository
     /**
      * batch replace document
      *
-     * @param \DONG2020\Contracts\CollectionFindOption $findOption
+     * @param \CXD2020\Contracts\CollectionFindOption $findOption
      * @param array                                 $attributes
      * @param array                                 $withRels
      *

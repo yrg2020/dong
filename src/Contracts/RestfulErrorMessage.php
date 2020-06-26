@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Contracts;
+namespace CXD2020\Contracts;
 
 
 use Illuminate\Http\Response;
@@ -19,7 +19,7 @@ use Illuminate\Http\Response;
  *
  * [code] from your custom biz service
  *
- * @package DONG2020\Contracts
+ * @package CXD2020\Contracts
  */
 class RestfulErrorMessage
 {

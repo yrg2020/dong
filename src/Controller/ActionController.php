@@ -8,10 +8,10 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Controller;
+namespace CXD2020\Controller;
 
 use Illuminate\Http\Response;
-use DONG2020\Contracts\Action;
+use CXD2020\Contracts\Action;
 
 
 /**

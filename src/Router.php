@@ -1,6 +1,6 @@
 <?php
 /**
- * DONG2020 router
+ * CXD2020 router
  *
  * PHP Version 7.2
  *
@@ -8,14 +8,14 @@
  * @copyright v.k
  */
 
-namespace DONG2020;
+namespace CXD2020;
 
 use Illuminate\Support\Str;
-use DONG2020\Controller\ApiDocController;
-use DONG2020\Controller\RouteMapController;
+use CXD2020\Controller\ApiDocController;
+use CXD2020\Controller\RouteMapController;
 
 /**
- * DONG2020 router
+ * CXD2020 router
  */
 class Router extends \Laravel\Lumen\Routing\Router
 {
@@ -72,7 +72,7 @@ class Router extends \Laravel\Lumen\Routing\Router
                 }
                 $controllerClass = sprintf('%sController', $controllerName);
                 $path = Str::replaceFirst('/', '', $path);
-                call_user_func_array(sprintf('\DONG2020\%s', $type), [
+                call_user_func_array(sprintf('\CXD2020\%s', $type), [
                     $this,
                     $path,
                     $controllerClass,

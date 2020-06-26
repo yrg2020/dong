@@ -8,7 +8,7 @@
  * @copyright v.k
  */
 
-namespace DONG2020\Service\Traits;
+namespace CXD2020\Service\Traits;
 
 use Illuminate\Support\Fluent;
 
@@ -58,7 +58,7 @@ trait AccessTokenHolder
     private $_token;
 
     /**
-     * @param \DONG2020\Service\Traits\IAccessTokenManager $manager
+     * @param \CXD2020\Service\Traits\IAccessTokenManager $manager
      */
     protected function setAccessTokenManager(IAccessTokenManager $manager)
     {

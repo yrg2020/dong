@@ -8,23 +8,23 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020;
+namespace CXD2020;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
-use DONG2020\Console\Kernel;
-use DONG2020\Contracts\IResourcePresenter;
-use DONG2020\Middleware\Cors;
-use DONG2020\Middleware\JwtAuth;
-use DONG2020\Middleware\Transaction;
-use DONG2020\Service\ExceptionHandler;
-use DONG2020\Service\Jwt;
+use CXD2020\Console\Kernel;
+use CXD2020\Contracts\IResourcePresenter;
+use CXD2020\Middleware\Cors;
+use CXD2020\Middleware\JwtAuth;
+use CXD2020\Middleware\Transaction;
+use CXD2020\Service\ExceptionHandler;
+use CXD2020\Service\Jwt;
 
 
 /**
  * service provider
  */
-class DONG2020ServiceProvider extends ServiceProvider
+class CXD2020ServiceProvider extends ServiceProvider
 {
     /**
      * The application instance.
@@ -54,11 +54,11 @@ class DONG2020ServiceProvider extends ServiceProvider
             }
         );
 
-        $this->app->singleton('DONG2020.jwt', function () {
+        $this->app->singleton('CXD2020.jwt', function () {
             return new Jwt(\env('APP_KEY'));
         });
         $this->app->singleton(Jwt::class, function () {
-            return $this->app->make('DONG2020.jwt');
+            return $this->app->make('CXD2020.jwt');
         });
 
         $this->app->routeMiddleware([

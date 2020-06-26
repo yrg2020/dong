@@ -8,16 +8,16 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Controller;
+namespace CXD2020\Controller;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\ParameterBag;
-use DONG2020\Contracts\CollectionFindOption;
-use DONG2020\Contracts\IResourceRepository;
-use DONG2020\Contracts\PaginationOption;
-use DONG2020\Contracts\RestfulErrorMessage;
-use DONG2020\Contracts\RestfulException;
-use DONG2020\Contracts\RestfulRequest;
+use CXD2020\Contracts\CollectionFindOption;
+use CXD2020\Contracts\IResourceRepository;
+use CXD2020\Contracts\PaginationOption;
+use CXD2020\Contracts\RestfulErrorMessage;
+use CXD2020\Contracts\RestfulException;
+use CXD2020\Contracts\RestfulRequest;
 
 
 /**
@@ -78,7 +78,7 @@ abstract class RestfulController extends MethController
      */
     protected function prepare()
     {
-        $this->idKey = \config('DONG2020.idKey', 'id');
+        $this->idKey = \config('CXD2020.idKey', 'id');
         $this->restfulRequest = new RestfulRequest($this->request);
         $this->_repository = $this->getRepository();
     }
@@ -88,7 +88,7 @@ abstract class RestfulController extends MethController
      *
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
-     * @throws \DONG2020\Contracts\RestfulException
+     * @throws \CXD2020\Contracts\RestfulException
      */
     public function handle(...$args)
     {
@@ -108,7 +108,7 @@ abstract class RestfulController extends MethController
     }
 
     /**
-     * @return null|\DONG2020\Contracts\Collection|\DONG2020\Contracts\Document
+     * @return null|\CXD2020\Contracts\Collection|\CXD2020\Contracts\Document
      * @throws \Throwable
      */
     private function _get()

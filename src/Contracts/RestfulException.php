@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Contracts;
+namespace CXD2020\Contracts;
 
 
 /**

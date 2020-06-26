@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Middleware;
+namespace CXD2020\Middleware;
 
 use Illuminate\Support\Facades\DB;
 

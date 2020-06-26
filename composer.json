@@ -1,6 +1,6 @@
 {
-    "name": "dong/dong2020",
-    "description": "dong2020",
+    "name": "cxd/cxd2020",
+    "description": "cxd2020",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,7 +15,7 @@
     },
     "autoload": {
     "psr-4": {
-      "DONG2020\\": "src/"
+      "CXD2020\\": "src/"
     },
     "files": [
        "src/helpers.php"

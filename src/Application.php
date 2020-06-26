@@ -1,6 +1,6 @@
 <?php
 /**
- * DONG2020 application
+ * CXD2020 application
  *
  * PHP Version 7.2
  *
@@ -8,10 +8,10 @@
  * @copyright v.k
  */
 
-namespace DONG2020;
+namespace CXD2020;
 
 /**
- * DONG2020 application
+ * CXD2020 application
  */
 class Application extends \Laravel\Lumen\Application
 {

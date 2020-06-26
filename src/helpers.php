@@ -8,17 +8,17 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020;
+namespace CXD2020;
 
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\ParameterBag;
-use DONG2020\Contracts\IResourceRepository;
-use DONG2020\Contracts\RestfulErrorMessage;
-use DONG2020\Contracts\RestfulException;
-use DONG2020\Controller\RestfulController;
-use DONG2020\Controller\RestfulRelController;
+use CXD2020\Contracts\IResourceRepository;
+use CXD2020\Contracts\RestfulErrorMessage;
+use CXD2020\Contracts\RestfulException;
+use CXD2020\Controller\RestfulController;
+use CXD2020\Controller\RestfulRelController;
 
 /**
  * @param $path
@@ -46,7 +46,7 @@ function api(Router $router, string $path, $controllerClass, string $fullPath, $
     $action = sprintf('%s@%s', $controllerClass, 'handle');
     $fullControllerClass::setName($fullPath);
 
-    $key = config('DONG2020.idKey', 'id');
+    $key = config('CXD2020.idKey', 'id');
     $documentPath = $isRestController ? sprintf('%s/{%s}', $path, $key) : null;
 
     $methods = $router->getControllerAllowedMethods($fullControllerClass, $methods);

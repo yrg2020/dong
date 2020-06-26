@@ -8,7 +8,7 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Contracts;
+namespace CXD2020\Contracts;
 
 use Illuminate\Support\Fluent;
 
@@ -39,9 +39,9 @@ class CollectionMeta extends Fluent
         array $links = [],
         array $rels = []
     ) {
-        $href = \DONG2020\stdPath($href);
+        $href = \CXD2020\stdPath($href);
         foreach ($links as &$link) {
-            $link['href'] = \DONG2020\stdPath($link['href']);
+            $link['href'] = \CXD2020\stdPath($link['href']);
         }
         parent::__construct([
             'href'       => $href,

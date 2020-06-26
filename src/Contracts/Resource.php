@@ -8,7 +8,7 @@
  * @copyright 2018 Xingchangxinda Inc.
  */
 
-namespace DONG2020\Contracts;
+namespace CXD2020\Contracts;
 
 use Illuminate\Support\Fluent;
 

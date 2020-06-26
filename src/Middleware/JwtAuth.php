@@ -8,10 +8,10 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Middleware;
+namespace CXD2020\Middleware;
 
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
-use DONG2020\Service\Jwt;
+use CXD2020\Service\Jwt;
 
 
 /**

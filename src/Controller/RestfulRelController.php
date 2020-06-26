@@ -8,12 +8,12 @@
  * @copyright 2019 ec3s.com
  */
 
-namespace DONG2020\Controller;
+namespace CXD2020\Controller;
 
 
 use Illuminate\Http\Request;
-use DONG2020\Contracts\Document;
-use DONG2020\Contracts\IResourceRepository;
+use CXD2020\Contracts\Document;
+use CXD2020\Contracts\IResourceRepository;
 
 
 /**

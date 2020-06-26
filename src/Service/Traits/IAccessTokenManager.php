@@ -8,7 +8,7 @@
  * @copyright v.k
  */
 
-namespace DONG2020\Service\Traits;
+namespace CXD2020\Service\Traits;
 
 /**
  * Interface AccessTokenManager

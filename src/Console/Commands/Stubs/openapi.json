@@ -1,0 +1,18 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "",
+    "title": ""
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "tags": [],
+  "paths": {
+  },
+  "definitions": {
+  }
+}

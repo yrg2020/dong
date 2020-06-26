@@ -1,0 +1,24 @@
+{
+    "name": "dong/dong2020",
+    "description": "dong2020",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yrg"
+        }
+    ],
+    "require": {
+    "php": ">=7.2",
+     "ext-json": "*",
+     "laravel/lumen-framework": "^6.0"
+    },
+    "autoload": {
+    "psr-4": {
+      "DONG2020\\": "src/"
+    },
+    "files": [
+       "src/helpers.php"
+    ]
+  }
+}
